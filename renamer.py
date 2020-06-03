@@ -13,7 +13,7 @@ if user_input.capitalize() == 'Y':
         ext = extension_finder.search(file_names)
         no += 1                                            # no variable will increement each time the loop runs 
         try:
-            replace_name = f'{string}-{no}{file_names[ext.start():ext.end()]}'     # .start() will get starting index and .end() will get ending index of the extension string
+            replace_name = f'{string}-{no}{file_names[ext.start():ext.end()]}'     # .start() will return starting index and .end() will return ending index of the extension string
         except AttributeError:                                                     # for renaming multiple directories
             replace_name = f'{string}-{no}'
         os.rename(file_names, replace_name)
